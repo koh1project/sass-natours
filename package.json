@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/koh1project/sass-natours/issues"
   },
-  "homepage": "https://github.com/koh1project/sass-natours#readme"
+  "homepage": "https://github.com/koh1project/sass-natours#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
 }
