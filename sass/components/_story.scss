@@ -7,11 +7,25 @@
   padding: 6rem;
   padding-left: 9rem;
   font-size: $default-font-size;
-  transform: skewX(-12deg); // &>* {
+  transform: skewX(-12deg);
+
+  // &>* {
   //   // It doesn't work for its image
   //   // because the image has already transformed
   //   transform: skewX(12deg);
   // }
+
+
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include respond(phone) {
+    transform: skewX(0);
+  }
+
   &__shape {
     width: 15rem;
     height: 15rem;
@@ -23,6 +37,10 @@
     transform: translateX(-3rem) skewX(12deg);
     overflow: hidden;
     position: relative;
+
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
   }
 
   &__img {
@@ -34,6 +52,10 @@
 
   &__text {
     transform: skewX(12deg);
+
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__caption {
@@ -48,7 +70,9 @@
     opacity: 0;
     transition: all .5s;
     backface-visibility: hidden;
-  } // .story:hover .story__caption
+  }
+
+  // .story:hover .story__caption
   &:hover &__caption {
     opacity: 1;
     transform: translate(-50%, -50%);
