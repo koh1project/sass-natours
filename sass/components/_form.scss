@@ -81,9 +81,7 @@
     display: inline-block;
     position: absolute;
     left: 0;
-    top: -.4rem;
-
-    // Inner circle
+    top: -.4rem; // Inner circle
     &::after {
       content: "";
       display: block;
